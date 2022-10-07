@@ -1,11 +1,23 @@
 body {
-    background-image: url();
-    background-size:cover;
+    
+    background: whitesmoke;
     font-family: 'Source Code Pro', monospace;
     font-weight: bold;
     text-align: center;
+    color: #130e0f;
 }
 
-p {
-    color: red;
+h1 {
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+
+#container {
+    width: 100%;
+}
+
+.team-img {
+    width: 100px;
+    border-radius: 100%;
+    margin: 10px;
 }

@@ -48,9 +48,46 @@ btnEl.addEventListener("click", function(){
 })
 
 /////////////////// Generate a sentence ///////////////////
+//Conditions:
+// Has two paramaters, desc and array.
+// Takes both of these and prints a string
+// Also prints out the number of items in that array
 
-/////////////////// Saving and fetching from local storage ///////////////////
-/////////////////// Saving and fetching from local storage ///////////////////
-/////////////////// Saving and fetching from local storage ///////////////////
-/////////////////// Saving and fetching from local storage ///////////////////
-/////////////////// Saving and fetching from local storage ///////////////////
+let desceg = "Largest countries"
+let items = ["China", "India", "USA"]
+
+function generateSentence(desc,arr) {
+    let baseString = `The ${arr.length} ${desc} are `
+    const lastIndex = arr.length - 1
+    for(let i = 0; i< arr.length; i++) {
+        if (i === lastIndex) {
+            baseString += arr[i] + ". "
+        } else {
+            baseString += arr[i] + ", "
+        }
+        
+    } 
+    return baseString  
+}
+console.log(generateSentence(desceg,items))
+
+//Difficulties. Thought you could use a for loop, return the array and directly insert it into the sentence.
+/////////////// Turns out you need to keep that outside the loop.
+
+/////////////////// Render Images ///////////////////
+// Idea of this challenge is to understand that databases are easier to get info from than hardcoding stuff into HTML etc
+const container = document.getElementById("container")
+const imgs = [
+    "per1.png",
+    "per2.jpg",
+    "per3.jpg",
+]
+
+function renderImg(arr) {
+    let imgsDOM = ""
+    for(let i = 0; i<arr.length; i++) {
+        imgsDOM += `<img alt="Employee profile picture" class="team-img" src="${arr[i]}">`
+    }
+    container.innerHTML += imgsDOM
+}
+renderImg(imgs)
